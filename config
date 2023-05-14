@@ -2,6 +2,7 @@ bar "top" {
     position top
     swaybar_command waybar
 }
+workspace_auto_back_and_forth yes
 
 include module.d/import.conf
 include config.d/var.conf
