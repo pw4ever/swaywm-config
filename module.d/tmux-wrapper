@@ -1,0 +1,11 @@
+#!/bin/bash - 
+
+TMUX=${TMUX:-tmux}
+
+if type -p "$TMUX"; then
+    if "$TMUX" has-session; then
+        "$TMUX" attach-session
+    else
+        "$TMUX" new-session
+    fi
+fi

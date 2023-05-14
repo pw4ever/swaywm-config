@@ -1,0 +1,14 @@
+bar "top" {
+    position top
+    swaybar_command waybar
+}
+
+include module.d/import.conf
+include config.d/var.conf
+include config.d/key.conf
+include config.d/io.conf
+# include rest of conf
+include config.d/*.conf
+include config.d/autostart/*.conf
+
+include /etc/sway/config.d/*
