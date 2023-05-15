@@ -9,8 +9,11 @@ include config.d/var.conf
 include config.d/key.conf
 include config.d/gesture.conf
 include config.d/io.conf
+include config.d/local.conf
 # include rest of conf
 include config.d/*.conf
+
 include config.d/autostart/*.conf
+include config.d/local.d/*.conf
 
 include /etc/sway/config.d/*
