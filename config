@@ -7,6 +7,7 @@ workspace_auto_back_and_forth yes
 include module.d/import.conf
 include config.d/var.conf
 include config.d/key.conf
+include config.d/gesture.conf
 include config.d/io.conf
 # include rest of conf
 include config.d/*.conf
