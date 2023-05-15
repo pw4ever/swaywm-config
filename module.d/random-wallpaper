@@ -1,0 +1,11 @@
+#!/bin/bash - 
+
+sleep_int=${1:-300}; 2>&1 shift
+img_path=$(1:-~/.config/sway/config.d/local.d/); 2>&1 shift
+
+while true; do
+    find ~/.config/sway/config.d/local.d/bg -type f -exec file --mime-type {} \+ \
+        | awk -F: '{if ($2 ~/image\//) print $1}' | shuf -n 1 \
+        | while read -r line; do swaymsg output '*' bg "$line" fill; done
+    sleep ${sleep_int}
+done
