@@ -1,11 +1,11 @@
 #!/bin/bash - 
 
 sleep_int=${1:-300}; 2>&1 shift
-img_path=$(1:-~/.config/sway/config.d/local.d/); 2>&1 shift
+img_path=${1:-~/.config/sway/config.d/local.d/bg}; 2>&1 shift
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 while true; do
-    find ~/.config/sway/config.d/local.d/bg -type f -exec file --mime-type {} \+ \
-        | awk -F: '{if ($2 ~/image\//) print $1}' | shuf -n 1 \
-        | while read -r line; do swaymsg output '*' bg "$line" fill; done
+    "$SCRIPT_DIR"/random-wallpaper-once "${img_path}"
     sleep ${sleep_int}
 done
