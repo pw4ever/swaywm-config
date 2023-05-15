@@ -3,7 +3,7 @@
 ## Dependencies
 
 ```bash
-paru -S --noconfirm --needed gdm wayland wl-clipboard cliphist wev wdisplays wlr-randr kanshi
+paru -S --noconfirm --needed gdm wayland wl-clipboard cliphist wev wdisplays wlr-randr kanshi autotiling
 paru -S --noconfirm --needed sway swayidle swaylock swaybg swayimg waybar
 paru -S --noconfirm --needed gvim emacs kitty tmux ranger pcmanfm ipython rofi rofi-calc rofi-emoji jq dex
 paru -S --noconfirm --needed bitwarden signal-desktop
