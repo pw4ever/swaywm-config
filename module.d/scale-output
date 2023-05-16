@@ -1,0 +1,14 @@
+#!/bin/bash - 
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+multiplier=${1:-1}; 2>&1 shift
+
+output=$("$SCRIPT_DIR/cur-output")
+
+cur_scale=$(swaymsg -t get_outputs | jq -r ".[] | select(.name==\"$output\") | .scale")
+new_scale=$(bc <<<"$cur_scale * $multiplier")
+
+cmd="swaymsg output '$output' scale '$new_scale'"
+>&2 cat <<<"$cmd"
+eval $cmd

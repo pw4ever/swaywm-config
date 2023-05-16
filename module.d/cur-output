@@ -1,0 +1,12 @@
+#!/bin/bash - 
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+output=$(swaymsg -t get_workspaces | jq -r '.[] | select(.focused==true) | .output')
+
+[[ -n "$output" ]] || {
+    >&2 cat <<<"Cannot find current output"
+    exit 1
+}
+
+echo $output
