@@ -24,6 +24,11 @@
     //         "default": ""
     //     }
     // },
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{name}",
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
