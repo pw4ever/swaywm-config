@@ -5,6 +5,8 @@
 ```bash
 paru -S --noconfirm --needed gdm wayland wl-clipboard libnotify light cliphist
 paru -S --noconfirm --needed wdisplays wlr-randr kanshi autotiling ydotool swaync
+paru -S --noconfirm --needed pipewire lib32-pipewire pipewire-docs wireplumber qpwgraph
+paru -S --noconfirm --needed pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pipewire-v4l2 alsa-utils
 paru -S --noconfirm --needed sway swayidle swaylock swaybg swayimg waybar otf-font-awesome
 paru -S --noconfirm --needed gvim emacs kitty tmux ranger pcmanfm ipython rofi rofi-pass rofi-calc rofi-emoji wofi jq
 paru -S --noconfirm --needed bitwarden signal-desktop
