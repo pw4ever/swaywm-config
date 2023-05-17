@@ -5,7 +5,7 @@
 ```bash
 paru -S --noconfirm --needed gdm wayland wl-clipboard libnotify light cliphist
 paru -S --noconfirm --needed wdisplays wlr-randr kanshi autotiling ydotool swaync
-paru -S --noconfirm --needed sway swayidle swaylock swaybg swayimg waybar
+paru -S --noconfirm --needed sway swayidle swaylock swaybg swayimg waybar otf-font-awesome
 paru -S --noconfirm --needed gvim emacs kitty tmux ranger pcmanfm ipython rofi rofi-calc rofi-emoji jq
 paru -S --noconfirm --needed bitwarden signal-desktop
 paru -S --noconfirm --needed google-chrome firefox
