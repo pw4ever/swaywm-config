@@ -26,7 +26,7 @@
     // },
     "sway/workspaces": {
         "disable-scroll": false,
-        "all-outputs": true,
+        "all-outputs": false,
         "format": "{name}",
     },
     "keyboard-state": {
