@@ -5,9 +5,10 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/notification"],
+    //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/notification"],
+    "modules-right": ["idle_inhibitor", "mpris", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/notification"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -186,6 +187,14 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+    "mpris": {
+        "status-icons": {
+            "playing": "▶️",
+            "paused": "⏸️",
+            "stopped": "⏹️",
+        },
+        "format": "{player}{status_icon}[{length}]",
     },
 }
 

@@ -1,0 +1,5 @@
+#!/bin/bash -
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+playerctl metadata --format '{{ playerName }} {{ emoji(status) }}: {{ artist }} - {{ title }} {{ duration(position) }}|{{ duration(mpris:length) }}'

@@ -1,0 +1,22 @@
+#!/bin/bash -
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+cur=$(playerctl loop)
+case "$cur" in
+    None)
+        new=Track
+        ;;
+    Track)
+        new=Playlist
+        ;;
+    Playlist)
+        new=None
+        ;;
+    *)
+        exit 1
+        ;;
+esac
+
+playerctl loop "$new"
+notify-send -e -t 2000 "media play loop status" "$cur => $new"

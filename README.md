@@ -11,6 +11,7 @@ paru -S --noconfirm --needed sway swayidle swaylock swaybg swayimg waybar otf-fo
 paru -S --noconfirm --needed gvim emacs kitty tmux ranger pcmanfm ipython rofi rofi-pass rofi-calc rofi-emoji wofi jq
 paru -S --noconfirm --needed bitwarden signal-desktop
 paru -S --noconfirm --needed google-chrome firefox
-paru -S --noconfirm --needed grim slurp annotator feh
+paru -S --noconfirm --needed grim slurp annotator feh playerctl
 paru -S --noconfirm --needed xdg-desktop-portal-wlr wev
+paru -S --noconfirm --needed mpd-mpris mpv-mpris-git wl-mpris-idle-inhibit
 ```
