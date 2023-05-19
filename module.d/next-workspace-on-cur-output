@@ -1,0 +1,32 @@
+#!/bin/env bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+offset=${1:-1}; 2>/dev/null shift
+
+# non-blockingly synchronize executions
+tmpfile=/tmp/sway-next-workspace-on-cur-output.lock
+exec 100>$tmpfile || exit 1
+flock -n 100 || exit 1
+
+wss=$(swaymsg -t get_workspaces)
+cur=$(echo $wss | jq -r '.[] | select(.focused==true)')
+cur_name=$(echo $cur | jq -r '.name')
+cur_output=$(echo $cur | jq -r '.output')
+if [[ -z "${cur_output:-}" ]]; then
+    >&2 cat <<<"Cannot find current output"
+    exit 1
+fi
+
+declare -a names
+readarray -t names <<<$(echo $wss | jq -r ".[] | select(.output==\"$cur_output\") | .name" | sort -b)
+count=${#names[@]}
+i=0
+while ((i < count)); do
+    if [[ ${names[$i]} = ${cur_name} ]]; then
+        break
+    fi
+    ((i += 1))
+done
+((i += offset, i %= count))
+swaymsg workspace "${names[$i]}"

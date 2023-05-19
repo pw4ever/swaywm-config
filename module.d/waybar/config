@@ -28,7 +28,8 @@
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": false,
-        "format": "{name}",
+        "format": "{value}",
+        "alphabetical_sort": true,
     },
     "keyboard-state": {
         "numlock": true,
