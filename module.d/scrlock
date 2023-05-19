@@ -4,6 +4,14 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 args=${1:--f -c 000000 -F -l}; 2>/dev/null shift
 
+helptext=$(swaylock --help 2>&1)
+if grep -q -- --clock <<<$helptext; then
+    args="$args --clock"
+fi
+if grep -q -- --effect-blur <<<$helptext; then
+    args="$args --effect-scale 0.5 --effect-blur 2x2"
+fi
+
 bg=$("$SCRIPT_DIR/select-random-wallpaper")
 bg_fallback=/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
 
