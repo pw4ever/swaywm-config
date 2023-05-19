@@ -1,0 +1,11 @@
+#!/bin/bash -
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+name=inactive-windows-transparency.py
+for prog in /usr/share/sway/scripts/"$name" "$SCRIPT_DIR/$name"; do
+    if [[ -x "$prog" ]]; then
+        $prog "$@"
+        exit 0
+    fi
+done
