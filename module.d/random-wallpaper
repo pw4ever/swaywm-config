@@ -1,7 +1,7 @@
 #!/bin/bash -
 
-sleep_int=${1:-300}; 2>&1 shift
-img_path=${1:-~/.config/sway/config.d/local.d/bg}; 2>&1 shift
+sleep_int=${1:-300}; 2>/dev/null shift
+img_path=${1:-~/.config/sway/config.d/local.d/bg}; 2>/dev/null shift
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 

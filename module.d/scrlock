@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-args=${1:--f -c 000000 -F -l}; 2>&1 shift
+args=${1:--f -c 000000 -F -l}; 2>/dev/null shift
 
 bg=$("$SCRIPT_DIR/select-random-wallpaper")
 bg_fallback=/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png

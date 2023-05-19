@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-img_path=${1:-~/.config/sway/config.d/local.d/bg}; 2>&1 shift
+img_path=${1:-~/.config/sway/config.d/local.d/bg}; 2>/dev/null shift
 
 name=$(find "$img_path" -type f -exec file --mime-type {} \+ \
     | awk -F: '{if ($2 ~/image\//) print $1}' | shuf -n 1)
