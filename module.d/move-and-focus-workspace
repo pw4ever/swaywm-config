@@ -1,0 +1,7 @@
+#!/bin/bash -
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+workspace=$(swaymsg -t get_workspaces | jq -r '.[] | .name' | rofi -dmenu -p 'Move container to workspace')
+swaymsg move container to workspace "$workspace"
+swaymsg workspace "$workspace"
