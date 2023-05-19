@@ -11,6 +11,13 @@ fi
 if grep -q -- --effect-blur <<<$helptext; then
     args="$args --effect-scale 0.5 --effect-blur 2x2"
 fi
+grace_sec=1
+if grep -q -- --grace <<<$helptext; then
+    args="$args --grace $grace_sec --grace-no-touch --grace-no-mouse"
+fi
+if grep -q -- --fade-in <<<$helptext; then
+    args="$args --fade-in $((grace_sec * 2))"
+fi
 
 bg=$("$SCRIPT_DIR/select-random-wallpaper")
 bg_fallback=/usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
