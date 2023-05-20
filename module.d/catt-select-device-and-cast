@@ -10,4 +10,10 @@ fi
 sel=$(catt scan | rofi -dmenu)
 device=$(echo $sel | awk -F'[[:blank:]]' '{print $1}')
 
-catt -d "$device" cast "$(zenity --entry --title="cast media to" --text="URL or path of media to cast on $sel" --entry-text="$(wl-paste)")"
+if ping -c 1 "$device"; then
+    catt -d "$device" cast "$(
+        zenity --entry \
+            --title="cast media to" \
+            --text="URL or path of media to cast on $sel" \
+            --entry-text="$(wl-paste)")"
+fi
