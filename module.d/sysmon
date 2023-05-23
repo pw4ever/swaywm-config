@@ -1,0 +1,9 @@
+#!/bin/bash -
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+sysmon=${1:-atop}
+
+if ! sudo ${sysmon}; then
+    ${sysmon}
+fi
