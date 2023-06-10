@@ -4,6 +4,12 @@ bar "top" {
 }
 workspace_auto_back_and_forth yes
 
+default_border none
+default_floating_border none
+font pango:monospace 0
+titlebar_padding 1
+titlebar_border_thickness 0
+
 include module.d/import.conf
 include config.d/var.conf
 include config.d/key.conf
