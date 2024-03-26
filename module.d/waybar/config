@@ -202,6 +202,8 @@
         "tooltip": true,
         "interval": 60,
         "exec": "wttrbar",
+        "on-click": "wttrbar",
+        "on-click-right": "xdg-open https://wttr.in",
         "return-type": "json"
     },
 }
