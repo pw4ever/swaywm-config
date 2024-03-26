@@ -8,7 +8,7 @@
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window"],
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/notification"],
-    "modules-right": ["idle_inhibitor", "mpris", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/notification"],
+    "modules-right": ["idle_inhibitor", "mpris", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "custom/weather", "tray", "custom/notification"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -196,6 +196,13 @@
             "stopped": "⏹️",
         },
         "format": "{player}{status_icon}[{length}]",
+    },
+    "custom/weather": {
+        "format": "{} °",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar",
+        "return-type": "json"
     },
 }
 
