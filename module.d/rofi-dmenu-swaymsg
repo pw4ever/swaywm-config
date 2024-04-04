@@ -1,0 +1,104 @@
+#!/bin/bash -
+
+choice=$(rofi -dmenu <<-END
+border none
+border normal
+border csd
+border pixel 5
+border toggle
+exec 
+exit
+floating enable
+floating disable
+floating toggle
+focus up
+focus right
+focus down
+focus left
+focus prev
+focus next
+focus prev sibling
+focus next sibling
+focus child
+focus parent
+focus output up
+focus output right
+focus output down
+focus output left
+focus tiling
+focus floating
+focus mode_toggle
+fullscreen
+fullscreen enable
+fullscreen disable
+fullscreen toggle
+fullscreen enable global
+fullscreen disable global
+fullscreen toggle global
+inhibit_idle focus
+inhibit_idle fullscreen
+inhibit_idle open
+inhibit_idle none
+inhibit_idle visible
+kill
+layout default
+layout splith
+layout splitv
+layout stacking
+layout tabbed
+layout toggle split
+layout toggle all
+mouse_warping output
+mouse_warping container
+mouse_warping none
+move left
+move right
+move up
+move down
+move position center
+move absolute position center
+move position cursor
+move position mouse
+move position pointer
+move container to workspace prev
+move container to workspace next
+move container to workspace current
+move container to workspace prev_on_output
+move container to workspace next_on_output
+move container to workspace back_and_forth
+move container to output up
+move container to output right
+move container to output down
+move container to output left
+move container to scratchpad
+move workspace to output up
+move workspace to output right
+move workspace to output down
+move workspace to output left
+opacity set 0.8
+opacity plus 0.1
+opacity minus 0.1
+reload
+resize shrink width
+resize shrink height
+resize grow width
+resize grow height
+scratchpad show
+shortcuts_inhibitor enable
+shortcuts_inhibitor disable
+show_marks yes
+show_marks no
+split vertical
+split v
+split horizontal
+split h
+split none
+split n
+split toggle
+split t
+sticky enable
+sticky disable
+sticky toggle
+END
+)
+swaymsg $choice
