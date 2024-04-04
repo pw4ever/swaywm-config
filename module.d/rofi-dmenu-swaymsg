@@ -1,6 +1,6 @@
 #!/bin/bash -
 
-choice=$(rofi -dmenu <<-END
+choice=$(rofi -dmenu -p 'swaymsg' -mesg 'Enter command that will be sent to <b>swaymsg</b>' <<-END
 border none
 border normal
 border csd
