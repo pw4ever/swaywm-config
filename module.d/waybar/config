@@ -142,6 +142,8 @@
         "on-click": "blueman-manager",
         "on-click-middle": "bluedevil-sendfile",
         "on-click-right": "bluedevil-wizard",
+        "on-scroll-up": "bluetoothctl power on",
+        "on-scroll-down": "bluetoothctl power off",
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
