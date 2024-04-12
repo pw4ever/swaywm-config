@@ -8,7 +8,7 @@
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window"],
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/notification"],
-    "modules-right": ["idle_inhibitor", "mpris", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "custom/weather", "tray", "custom/notification"],
+    "modules-right": ["idle_inhibitor", "mpris", "pulseaudio", "bluetooth", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "custom/weather", "tray", "custom/notification"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -128,6 +128,20 @@
     },
     "battery#bat2": {
         "bat": "BAT2"
+    },
+    "bluetooth": {
+        "format": "<big></big> {status}",
+        "format-connected": "<big></big> {device_alias}",
+        "format-off": "<s></s> {status}",
+        "format-disabled": "<s></s> {status}",
+        //"format-disabled": "", // an empty format will hide the module
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+
+        "on-click": "blueman-manager",
+        "on-click-middle": "bluedevil-sendfile",
+        "on-click-right": "bluedevil-wizard",
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
