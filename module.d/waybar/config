@@ -132,8 +132,8 @@
     "bluetooth": {
         "format": "<big></big> {status}",
         "format-connected": "<big></big> {device_alias}",
-        "format-off": "<s></s> {status}",
-        "format-disabled": "<s></s> {status}",
+        "format-off": "󰂲 {status}",
+        "format-disabled": "󰂲 {status}",
         //"format-disabled": "", // an empty format will hide the module
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
