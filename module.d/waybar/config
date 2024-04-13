@@ -81,7 +81,8 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        }
+        },
+        "start-activated": true,
     },
     "tray": {
         // "icon-size": 21,
