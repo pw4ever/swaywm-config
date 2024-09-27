@@ -4,5 +4,9 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 "$SCRIPT_DIR/select-random-wallpaper" | \
     while read -r line; do
-        swaymsg output '*' bg "$line" fill;
+        if >/dev/null type -p swww && pgrep swww-daemon; then
+            swww img "$line"
+        else
+            swaymsg output '*' bg "$line" fill;
+        fi
     done
