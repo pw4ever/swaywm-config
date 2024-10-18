@@ -11,6 +11,7 @@ include module.d/ui.conf
 include config.d/gesture.conf
 include config.d/io.conf
 include config.d/local.conf
+include config.d/app.conf
 # include rest of conf
 include config.d/*.conf
 
