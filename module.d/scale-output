@@ -6,7 +6,7 @@ multiplier=${1:-1}; 2>/dev/null shift
 
 output=$("$SCRIPT_DIR/cur-output")
 cur_scale=$("$SCRIPT_DIR/cur-output-scale")
-new_scale=$(bc <<<"$cur_scale * $multiplier")
+new_scale=$(awk "BEGIN { print $cur_scale * $multiplier }")
 
 cmd="swaymsg output '$output' scale '$new_scale'"
 >&2 cat <<<"$cmd"
