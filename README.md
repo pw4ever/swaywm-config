@@ -3,6 +3,7 @@
 ## Dependencies
 
 ```bash
+paru -S --noconfirm --needed clang llvm lld
 paru -S --noconfirm --needed gdm wayland wl-clipboard libnotify light cliphist polkit-gnome
 paru -S --noconfirm --needed wdisplays wlr-randr kanshi autotiling ydotool swaync
 paru -S --noconfirm --needed pipewire lib32-pipewire pipewire-docs wireplumber qpwgraph
