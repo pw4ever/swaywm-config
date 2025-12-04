@@ -14,6 +14,6 @@ paru -S --noconfirm --needed bitwarden signal-desktop
 paru -S --noconfirm --needed google-chrome firefox
 paru -S --noconfirm --needed grim slurp annotator feh playerctl
 paru -S --noconfirm --needed xdg-desktop-portal-wlr wev
-paru -S --noconfirm --needed mpd-mpris mpv-mpris wl-mpris-idle-inhibit catt zenity
+paru -S --noconfirm --needed mpd-mpris mpv-mpris wl-mpris-idle-inhibit catt zenity wl-kbptr
 paru -S --noconfirm --needed gnome-themes-extra adwaita-qt5-git adwaita-qt6-git
 ```
