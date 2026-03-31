@@ -2,34 +2,39 @@
 <interface>
   <object class="GtkMenu" id="menu">
     <child>
-      <object class="GtkMenuItem" id="reload">
-        <property name="label">Reload</property>
+      <object class="GtkMenuItem" id="launcher">
+        <property name="label">Launcher</property>
       </object>
     </child>
     <child>
-      <object class="GtkMenuItem" id="logout">
-        <property name="label">Logout</property>
+      <object class="GtkMenuItem" id="terminal">
+        <property name="label">Terminal</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="tmux">
+        <property name="label">Tmux</property>
       </object>
     </child>
     <child>
       <object class="GtkSeparatorMenuItem" id="delimiter1"/>
     </child>
     <child>
-      <object class="GtkMenuItem" id="suspend">
-        <property name="label">Suspend</property>
+      <object class="GtkMenuItem" id="edit_config">
+        <property name="label">Edit Config</property>
       </object>
     </child>
     <child>
-      <object class="GtkMenuItem" id="shutdown">
-        <property name="label">Shutdown</property>
+      <object class="GtkMenuItem" id="reload_config">
+        <property name="label">Reload Config</property>
       </object>
     </child>
     <child>
       <object class="GtkSeparatorMenuItem" id="delimiter2"/>
     </child>
     <child>
-      <object class="GtkMenuItem" id="reboot">
-        <property name="label">Reboot</property>
+      <object class="GtkMenuItem" id="logout">
+        <property name="label">Logout</property>
       </object>
     </child>
   </object>

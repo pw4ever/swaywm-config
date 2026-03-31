@@ -31,11 +31,12 @@
     "menu": "on-click",
     "menu-file": "~/.config/waybar/system_menu.xml",
     "menu-actions": {
-      "reload": "swaymsg reload",
-      "logout": "swaymsg exit",
-      "suspend": "systemctl suspend",
-      "reboot": "systemctl reboot",
-      "poweroff": "systemctl poweroff"
+      "launcher": "rofi -combi-modi window,drun,run -show combi -modi combi,window,drun,run",
+      "terminal": "ghostty",
+      "tmux": "ghostty -e ~/.config/sway/module.d/tmux-wrapper",
+      "edit_config": "neovide ~/.config/sway/config",
+      "reload_config": "swaymsg reload",
+      "logout": "swaymsg exit"
     },
   },
   "sway/workspaces": {
