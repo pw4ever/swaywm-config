@@ -5,7 +5,7 @@
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
-  "modules-left": ["custom/system", "sway/workspaces", "sway/scratchpad"],
+  "modules-left": ["custom/system", "sway/workspaces", "sway/mode", "sway/scratchpad"],
   "modules-center": ["sway/window"],
   //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray", "custom/notification"],
   "modules-right": ["idle_inhibitor", "mpris", "pulseaudio", "bluetooth", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "custom/weather", "tray", "custom/notification"],
@@ -32,10 +32,17 @@
     "menu-file": "~/.config/waybar/system_menu.xml",
     "menu-actions": {
       "launcher": "rofi -combi-modi window,drun,run -show combi -modi combi,window,drun,run",
+      "taskmgr": "ghostty -e ~/.config/sway/module.d/sysmon",
       "terminal": "ghostty",
       "tmux": "ghostty -e ~/.config/sway/module.d/tmux-wrapper",
+      "editor": "neovide",
+      "files": "ghostty -e ranger",
+      "browser": "google-chrome --new-window",
+      "ipython": "ghostty -e ipython",
       "edit_config": "neovide ~/.config/sway/config",
       "reload_config": "swaymsg reload",
+      "edit_waybar_config": "neovide ~/.config/waybar/config",
+      "reload_waybar_config": "/usr/bin/killall -SIGUSR2 waybar",
       "logout": "swaymsg exit"
     },
   },
@@ -43,7 +50,11 @@
     "disable-scroll": false,
     "all-outputs": false,
     "format": "{value}",
-    "alphabetical_sort": true,
+    "alphabetical_sort": true
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>",
+    "max-length": 50
   },
   "keyboard-state": {
     "numlock": true,

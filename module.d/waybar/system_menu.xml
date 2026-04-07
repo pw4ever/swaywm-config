@@ -7,6 +7,11 @@
       </object>
     </child>
     <child>
+      <object class="GtkMenuItem" id="taskmgr">
+        <property name="label">Task Manager</property>
+      </object>
+    </child>
+    <child>
       <object class="GtkMenuItem" id="terminal">
         <property name="label">Terminal</property>
       </object>
@@ -17,20 +22,53 @@
       </object>
     </child>
     <child>
+      <object class="GtkMenuItem" id="editor">
+        <property name="label">Editor</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="files">
+        <property name="label">File Manager</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="browser">
+        <property name="label">Web Browser</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="ipython">
+        <property name="label">iPython</property>
+      </object>
+    </child>
+    <child>
       <object class="GtkSeparatorMenuItem" id="delimiter1"/>
     </child>
     <child>
       <object class="GtkMenuItem" id="edit_config">
-        <property name="label">Edit Config</property>
+        <property name="label">Edit Sway Config</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuItem" id="reload_config">
-        <property name="label">Reload Config</property>
+        <property name="label">Reload Sway Config</property>
       </object>
     </child>
     <child>
       <object class="GtkSeparatorMenuItem" id="delimiter2"/>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="edit_waybar_config">
+        <property name="label">Edit Waybar Config</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="reload_waybar_config">
+        <property name="label">Reload Waybar Config</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter3"/>
     </child>
     <child>
       <object class="GtkMenuItem" id="logout">
