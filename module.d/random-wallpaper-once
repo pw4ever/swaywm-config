@@ -1,12 +1,12 @@
 #!/bin/bash -
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
-"$SCRIPT_DIR/select-random-wallpaper" | \
-    while read -r line; do
-        if >/dev/null type -p swww && pgrep swww-daemon; then
-            swww img "$line"
-        else
-            swaymsg output '*' bg "$line" fill;
-        fi
-    done
+"$SCRIPT_DIR/select-random-wallpaper" |
+  while read -r line; do
+    if >/dev/null type -p awww && pgrep awww-daemon; then
+      awww img "$line"
+    else
+      swaymsg output '*' bg "$line" fill
+    fi
+  done

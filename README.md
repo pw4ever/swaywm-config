@@ -5,7 +5,7 @@
 ```bash
 paru -S --noconfirm --needed clang llvm lld
 paru -S --noconfirm --needed gdm wayland wl-clipboard libnotify light cliphist polkit-gnome
-paru -S --noconfirm --needed wdisplays wlr-randr kanshi autotiling ydotool swaync
+paru -S --noconfirm --needed wdisplays wlr-randr kanshi autotiling ydotool swaync awww
 paru -S --noconfirm --needed pipewire lib32-pipewire pipewire-docs wireplumber qpwgraph
 paru -S --noconfirm --needed pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack pipewire-v4l2 alsa-utils
 paru -S --noconfirm --needed swayfx swayidle swaylock-effects swaybg swayimg waybar otf-font-awesome python-i3ipc
